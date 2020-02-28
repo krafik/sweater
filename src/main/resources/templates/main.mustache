@@ -8,6 +8,25 @@
     <title>Document</title>
 </head>
 <body>
-<div class="">{{some}}</div>
+
+<div>
+    <form action="" method="post">
+        <input type="text" name="text" placeholder="введите сообщение"/>
+        <input type="text" name="tag" placeholder="Тэг">
+        <button type="submit">ДОбавить</button>
+    </form>
+</div>
+<div>список сообщений</div>
+<form action="filter" method="post">
+    <input type="text" name="filter" id="">
+    <button type="submit">найти</button>
+</form>
+{{#messages}}
+    <div>
+        <b>{{id}}</b>
+        <span>{{text}}</span>
+        <i>{{tag}}</i>
+    </div>
+{{/messages}}
 </body>
 </html>
